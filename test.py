@@ -33,4 +33,24 @@ def main():
 if __name__ == "__main__":
     main()
 
+
+
+# import numpy as np
+# from sklearn.linear_model import Perceptron
+# from sklearn.decomposition import PCA
+# import matplotlib.pyplot as plt
+
+# X = np.array([list(map(int, format(ord(c),'08b'))) for c in map(str, range(10))])
+# y = np.array([int(d)%2 for d in map(str, range(10))])
+# model = Perceptron(max_iter=1000, tol=1e-3, random_state=42).fit(X, y)
+# X2 = PCA(n_components=2).fit_transform(X)
+# xx, yy = np.meshgrid(
+#     np.linspace(X2[:,0].min()-1, X2[:,0].max()+1, 200),
+#     np.linspace(X2[:,1].min()-1, X2[:,1].max()+1, 200)
+# )
+# Z = model.predict(PCA(n_components=2).fit(X).inverse_transform(np.c_[xx.ravel(), yy.ravel()])).reshape(xx.shape)
+# plt.contourf(xx, yy, Z, alpha=0.2)
+# plt.scatter(X2[:,0], X2[:,1], c=y, cmap='bwr', edgecolor='k')
+# plt.title('Perceptron Decision Boundary (PCA)'); plt.show()
+
     
